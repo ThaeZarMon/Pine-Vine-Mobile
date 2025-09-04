@@ -213,7 +213,8 @@ form,
   width: 90%;
   margin: 20px auto;
   color: rgb(5, 107, 102);
-  margin-left: 40px;
+  margin-left: 20px;
+  padding: 0 20px 0 20px;
 }
 form div {
   padding: 20px 0;
@@ -223,7 +224,8 @@ form div {
   display: inline-block;
 }
 .form-control {
-  width: 400px;
+  width: 300px;
+  padding-right: 20px;
   /* background-color: skyblue; */
   border: none;
   outline: none;
@@ -274,6 +276,7 @@ footer {
   margin-right: 40px;
 }
 .copy {
+  margin-top: 20px;
   text-align: center;
 }
 @media screen and (min-width: 768px) {

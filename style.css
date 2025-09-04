@@ -7,9 +7,9 @@ html {
 }
 body {
   display: grid;
-  grid-template-rows: 2fr, 0.5fr, 2fr, 2fr, 1fr, 1fr;
+  grid-template-rows: 2fr, 0.5fr, 2fr, 2fr, 1fr, 1fr, 0.5fr;
   grid-template-columns: 1fr;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   background-color: skyblue;
   font-family: "Quicksand";
 }
@@ -20,6 +20,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   height: 250px;
+  display: inline-block;
 }
 header h1 {
   font-size: 2rem;
@@ -33,22 +34,33 @@ header h1 {
 header form {
   grid-row: 1/2;
   grid-column: 1/2;
-  margin-left: 40px;
+  text-align: right;
+  margin-top: -50px;
+}
+.search {
+  font-weight: bold;
+}
+.control {
+  width: 60px;
 }
 /* nav section// */
 nav {
-  padding: 20px;
+  padding: 15px;
   background-color: (skyblue);
   grid-row: 2/3;
   grid-column: 1/2;
-  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  background-color: skyblue;
 }
 nav a {
-  font-size: 1rem;
+  text-align: center;
+  font-size: 0.7rem;
   text-decoration: none;
   color: rgb(4, 65, 63);
-  padding: 20px;
-  display: block;
+  padding: 10px;
+  text-align: center;
+  border: none;
   border-radius: 5px;
 }
 .transition a:hover {
@@ -170,7 +182,7 @@ nav a {
 #about-us {
   grid-row: 5/6;
   grid-column: 1/2;
-  margin: 30px 0;
+  margin: 40px 0;
 }
 
 #about-us h2 {
@@ -201,6 +213,7 @@ form,
   width: 90%;
   margin: 20px auto;
   color: rgb(5, 107, 102);
+  margin-left: 40px;
 }
 form div {
   padding: 20px 0;
@@ -217,15 +230,18 @@ form div {
   border-bottom: 1px solid skyblue;
 }
 .btn-send {
-  width: 40px;
+  width: 45px;
   height: 30px;
   background-color: skyblue;
   color: rgb(5, 107, 102);
   border-radius: 9px;
   border: 1px solid rgb(5, 107, 102);
   outline: none;
-  margin-left: 40pxpx;
+  margin-left: auto;
   cursor: pointer;
+}
+.btn-send:hover {
+  background-color: #fff;
 }
 /* footer// */
 footer {
@@ -264,7 +280,7 @@ footer {
   body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr, 0.5fr, 2fr, 2fr, 1fr, 1fr;
+    grid-template-rows: 2fr, 0.5fr, 2fr, 2fr, 1fr, 1fr, 0.5fr;
     background: linear-gradient(
       to bottom left,
       rgb(145, 213, 240),
@@ -286,41 +302,39 @@ footer {
     grid-row: 1/2;
     margin-top: -50px;
     text-align: right;
-    margin-right: 50px;
+    margin-right: 80px;
   }
   /* nav section// */
   nav {
     grid-column: 1/2;
     grid-row: 2/3;
-    background-color: rgb(116, 177, 226);
     position: sticky;
     top: 0;
+    text-align: center;
+    margin-bottom: 20px;
   }
   nav a {
     display: inline-block;
-    padding: 0 30px 0 30px;
-    margin-left: 50px;
+    padding: 15px 20px 15px 20px;
+    border: none;
+    color: rgb(4, 65, 63);
+    /* text-align: center; */
+    font-size: 1rem;
+  }
+  .transition a:hover {
+    background-color: white;
+    border: 1px solid rgb(4, 65, 63);
+    width: 70px;
+    height: 15px;
+    line-height: 15px;
     text-align: center;
-  }
-  /* places section// */
-  #place {
-    grid-row: 3/4;
-  }
-  /* packages section// */
-  #our-menu {
-    grid-row: 4/5;
-  }
-
-  /* about-us section// */
-  #about-us {
-    grid-row: 5/6;
   }
 }
 @media screen and (min-width: 992px) {
   body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr, 0.5fr, 2fr, 2fr, 2fr, 1fr, 1fr;
+    grid-template-rows: 2fr, 0.5fr, 2fr, 2fr, 1fr, 1fr, 0.5fr;
     background: linear-gradient(
       to bottom left,
       rgb(145, 213, 240),
@@ -332,7 +346,7 @@ footer {
   }
   /* header// */
   header h1 {
-    grid-column: 1/5;
+    grid-column: 1/2;
     grid-row: 1/2;
     margin-top: 20px;
     margin-left: 50px;
@@ -345,54 +359,24 @@ footer {
     margin-right: 50px;
   }
   /* nav section// */
-  nav {
-    grid-column: 1/5;
-    grid-row: 2/3;
-    background-color: rgb(116, 177, 226);
-    position: sticky;
-    top: 0;
-  }
-  nav a {
-    display: inline-block;
-    padding: 0 30px 0 30px;
-    margin-left: 50px;
-    text-align: center;
-  }
   /* places section// */
-
-  .bangkok,
-  .chiangmai {
+  #place {
     grid-row: 3/4;
-    display: inline-block;
   }
-
-  .phuket,
-  .pattaya {
-    grid-row: 4/5;
-    display: inline-block;
+  .cities {
+    display: flex;
   }
-
+  .beaches {
+    display: flex;
+  }
   /* packages section// */
   #our-menu {
-    grid-row: 5/6;
+    grid-row: 4/5;
   }
   .menu1,
   .menu2,
   .menu3 {
     display: inline-block;
-  }
-
-  /* about-us section// */
-  #about-us {
-    grid-row: 6/7;
-  }
-  /* contact section// */
-  #profile {
-    grid-row: 7/8;
-  }
-  /* footer section// */
-  footer {
-    grid-row: 8/9;
   }
 }
 
@@ -411,54 +395,40 @@ footer {
     justify-content: space-around;
   }
   /* header// */
-  header h1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    margin-top: 20px;
-    margin-left: 50px;
+  header {
+    height: 360px;
   }
   header form {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    margin-top: -50px;
-    text-align: right;
-    margin-right: 50px;
+    margin-right: 40px;
+  }
+  .control {
+    width: 130px;
   }
   /* nav section// */
-  nav {
-    grid-column: 1/5;
-    grid-row: 2/3;
-    background-color: rgb(116, 177, 226);
-    position: sticky;
-    top: 0;
-  }
   nav a {
-    display: inline-block;
-    padding: 0 30px 0 30px;
-    margin-left: 50px;
+    padding: 20px 40px 20px 40px;
+  }
+  .transition a:hover {
+    background-color: white;
+    border: 1px solid rgb(4, 65, 63);
+    border-radius: 10px;
+    width: 70px;
+    height: 20px;
+    line-height: 20px;
     text-align: center;
   }
   /* places section// */
-  #place {
-    grid-row: 3/4;
-  }
-  .bangkok,
-  .chiangmai,
-  .phuket,
-  .pattaya {
-    display: inline-block;
+  .thai {
+    display: flex;
   }
   /* packages section// */
-  #our-menu {
-    grid-row: 4/5;
-  }
   .menu1,
   .menu2,
   .menu3 {
     display: inline-block;
   }
-  /* about-us section// */
-  #about-us {
-    grid-row: 5/6;
+  /* footer section// */
+  fonter {
+    margin: auto;
   }
 }

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="image/favicon.jpg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/009f55d721.js"
       crossorigin="anonymous"
@@ -13,7 +17,7 @@
   </head>
   <body>
     <!-- header section// -->
-    <header>
+    <header id="header">
       <h1>Pine & Vine</h1>
       <form action="">
         <div class="search">
@@ -27,10 +31,11 @@
     <nav>
       <div class="transition">
         <a href="#header">Home</a>
+        <a href="#place">Places</a>
         <a href="#our-menu">Packages</a>
-        <a href="places.html">Places</a>
         <a href="#about-us">About Us</a>
-        <a href="#profile">Create Profile</a>
+        <a href="#profile">Profile</a>
+        <a href="#footer">Links</a>
       </div>
     </nav>
 
@@ -38,52 +43,57 @@
     <section id="place">
       <h1>Choices</h1>
       <h2>Thailand</h2>
+      <div class="thai">
+        <div class="cities">
+          <div class="bangkok">
+            <img src="image/bangkok.jpg" alt="" srcset="" class="p-img" />
+            <div class="p-body">
+              <h3>Bangkok</h3>
+              <ul>
+                <li>Wat Arun</li>
+                <li>The Grand Palace</li>
+                <li>China Town</li>
+              </ul>
+            </div>
+          </div>
 
-      <div class="bangkok">
-        <img src="image/bangkok.jpg" alt="" srcset="" class="p-img" />
-        <div class="p-body">
-          <h3>Bangkok</h3>
-          <ul>
-            <li>Wat Arun</li>
-            <li>The Grand Palace</li>
-            <li>China Town</li>
-          </ul>
+          <div class="chiangmai">
+            <img src="image/chiangmai.jfif" alt="" srcset="" class="p-img" />
+            <div class="p-body">
+              <h3>Chiang Mai</h3>
+              <ul>
+                <li>National Park</li>
+                <li>Doi Luang Chiang</li>
+                <li>Elephant Jungle</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="chiangmai">
-        <img src="image/chiangmai.jfif" alt="" srcset="" class="p-img" />
-        <div class="p-body">
-          <h3>Chiang Mai</h3>
-          <ul>
-            <li>National Park</li>
-            <li>Doi Luang Chiang</li>
-            <li>Elephant Jungle</li>
-          </ul>
-        </div>
-      </div>
+        <div class="beaches">
+          <div class="phuket">
+            <img src="image/phuket.jpg" alt="" srcset="" class="p-img" />
+            <div class="p-body">
+              <h3>Phuket</h3>
+              <ul>
+                <li>Kata Beach</li>
+                <li>Bangla Road</li>
+                <li>Big Buddha</li>
+              </ul>
+            </div>
+          </div>
 
-      <div class="phuket">
-        <img src="image/phuket.jpg" alt="" srcset="" class="p-img" />
-        <div class="p-body">
-          <h3>Phuket</h3>
-          <ul>
-            <li>Kata Beach</li>
-            <li>Bangla Road</li>
-            <li>Big Buddha</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pattaya">
-        <img src="image/pattaya.jfif" alt="" srcset="" class="p-img" />
-        <div class="p-body">
-          <h3>Pattaya</h3>
-          <ul>
-            <li>Central Pattaya</li>
-            <li>Mini Siam</li>
-            <li>Sancturay of Truth</li>
-          </ul>
+          <div class="pattaya">
+            <img src="image/pattaya.jfif" alt="" srcset="" class="p-img" />
+            <div class="p-body">
+              <h3>Pattaya</h3>
+              <ul>
+                <li>Central Pattaya</li>
+                <li>Mini Siam</li>
+                <li>Sancturay of Truth</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -172,12 +182,12 @@
           <input type="password" class="form-control" name="" id="" />
         </div>
 
-        <input type="" value="Create" class="btn-send" />
+        <button class="btn-send">Create</button>
       </form>
     </section>
 
     <!-- footer section// -->
-    <footer>
+    <footer id="footer">
       <a href="#" class="to-top">&uarr;</a>
       <div class="connect">
         <h3>Contact Us</h3>

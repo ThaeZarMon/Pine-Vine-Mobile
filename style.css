@@ -52,6 +52,7 @@ nav {
   position: sticky;
   top: 0;
   background-color: skyblue;
+  text-align: center;
 }
 nav a {
   text-align: center;
@@ -193,7 +194,8 @@ nav a {
 }
 #about-us p {
   text-align: left;
-  margin-left: 40px;
+  margin-left: auto;
+  margin-right: auto;
   color: rgb(5, 107, 102);
   line-height: 2rem;
   font-size: 1rem;
@@ -307,6 +309,9 @@ footer {
     text-align: right;
     margin-right: 80px;
   }
+  .control {
+    width: 80px;
+  }
   /* nav section// */
   nav {
     grid-column: 1/2;
@@ -360,6 +365,9 @@ footer {
     margin-top: -50px;
     text-align: right;
     margin-right: 50px;
+  }
+  .control {
+    width: 80px;
   }
   /* nav section// */
   /* places section// */

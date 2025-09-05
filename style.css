@@ -10,7 +10,13 @@ body {
   grid-template-rows: 2fr, 0.5fr, 2fr, 2fr, 1fr, 1fr, 0.5fr;
   grid-template-columns: 1fr;
   /* justify-content: space-around; */
-  background-color: skyblue;
+  /* background-color: skyblue; */
+  background: linear-gradient(
+    to bottom,
+    white,
+    rgb(183, 206, 219),
+    rgb(145, 213, 240)
+  );
   font-family: "Quicksand";
 }
 /* header section// */
@@ -25,7 +31,7 @@ header {
 header h1 {
   font-size: 2rem;
   color: rgb(4, 65, 63);
-  margin-left: 40px;
+  margin-left: 20px;
 }
 header h1 {
   grid-row: 1/2;
@@ -42,6 +48,7 @@ header form {
 }
 .control {
   width: 60px;
+  border-radius: 10px;
 }
 /* nav section// */
 nav {
@@ -77,7 +84,7 @@ nav a {
   font-size: 2rem;
   color: rgb(4, 65, 63);
   margin-bottom: 20px;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 .bangkok,
 .chiangmai,
@@ -91,7 +98,8 @@ nav a {
   border-radius: 10px;
   text-align: center;
   padding: 5px;
-  margin-left: 50px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -125,7 +133,7 @@ nav a {
   font-size: 2rem;
   color: rgb(4, 65, 63);
   margin-bottom: 20px;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 .menu1,
 .menu2,
@@ -138,7 +146,8 @@ nav a {
   border-radius: 10px;
   text-align: center;
   padding: 5px;
-  margin-left: 50px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -183,23 +192,22 @@ nav a {
 #about-us {
   grid-row: 5/6;
   grid-column: 1/2;
-  margin: 40px 0;
 }
 
 #about-us h2 {
   color: rgb(4, 65, 63);
-  margin-left: 40px;
-  margin-bottom: 15px;
+  margin-left: 20px;
+  margin-bottom: 20px;
   font-size: 2rem;
 }
 #about-us p {
   text-align: left;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto;
   color: rgb(5, 107, 102);
   line-height: 2rem;
   font-size: 1rem;
   text-align: justify;
+  padding: 0 20px 0 20px;
 }
 /* contact section// */
 #profile {
@@ -208,15 +216,16 @@ nav a {
 }
 #profile h2 {
   color: rgb(4, 65, 63);
-  margin-left: 40px;
+  margin-left: 20px;
+  font-size: 2rem;
+  /* margin-bottom: 20px; */
 }
-form,
-#about-us p {
+form {
   width: 90%;
   margin: 20px auto;
   color: rgb(5, 107, 102);
   margin-left: 20px;
-  padding: 0 20px 0 20px;
+  padding: 0 30px 0 10px;
 }
 form div {
   padding: 20px 0;
@@ -259,7 +268,7 @@ footer {
   margin-top: 20px;
 }
 .connect {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .to-top {
   padding: 10px;
@@ -274,8 +283,8 @@ footer {
 }
 .extra {
   text-align: right;
-  margin-top: -70px;
-  margin-right: 40px;
+  margin-top: -73px;
+  margin-right: 20px;
 }
 .copy {
   margin-top: 20px;
@@ -337,19 +346,25 @@ footer {
     line-height: 15px;
     text-align: center;
   }
+  #place h1,
+  #place h2,
+  #our-menu h2,
+  #about-us h2,
+  #profile h2 {
+    margin-left: 50px;
+  }
+  #about-us p {
+    margin-left: 30px;
+  }
+  #profile form {
+    margin-left: 40px;
+  }
 }
 @media screen and (min-width: 992px) {
   body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr, 0.5fr, 2fr, 2fr, 1fr, 1fr, 0.5fr;
-    background: linear-gradient(
-      to bottom left,
-      rgb(145, 213, 240),
-      rgb(183, 206, 219),
-      white
-    );
-    font-family: "Quicksand";
     justify-content: space-around;
   }
   /* header// */
@@ -357,7 +372,7 @@ footer {
     grid-column: 1/2;
     grid-row: 1/2;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 100px;
   }
   header form {
     grid-column: 1/2;
@@ -371,23 +386,43 @@ footer {
   }
   /* nav section// */
   /* places section// */
+  #place h1,
+  #place h2,
+  #our-menu h2,
+  #about-us h2,
+  #profile h2 {
+    margin-left: 100px;
+  }
+
   #place {
     grid-row: 3/4;
   }
   .cities {
     display: flex;
+    margin-left: 0 auto;
   }
   .beaches {
     display: flex;
+    margin-left: 0 auto;
   }
+
   /* packages section// */
   #our-menu {
     grid-row: 4/5;
+  }
+  .package {
+    margin-left: 100px;
   }
   .menu1,
   .menu2,
   .menu3 {
     display: inline-block;
+  }
+  #about-us p {
+    margin-left: 80px;
+  }
+  #profile form {
+    margin-left: 90px;
   }
 }
 
@@ -396,14 +431,6 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr, 0.5fr, 2fr, 2fr, 1fr, 1fr;
-    background: linear-gradient(
-      to bottom left,
-      rgb(145, 213, 240),
-      rgb(183, 206, 219),
-      white
-    );
-    font-family: "Quicksand";
-    justify-content: space-around;
   }
   /* header// */
   header {
@@ -431,6 +458,7 @@ footer {
   /* places section// */
   .thai {
     display: flex;
+    margin-left: 100px;
   }
   /* packages section// */
   .menu1,
